@@ -43,7 +43,7 @@ if {$force_conservative} {
 
 
 set timeout 300
-spawn python3 main.py
+spawn python3.10.7 main.py
 match_max 100000
 expect -exact "\r
 \r
