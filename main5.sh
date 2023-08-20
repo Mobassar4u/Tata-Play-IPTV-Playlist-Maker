@@ -107,8 +107,8 @@ initiate_setup()
     sudo apt update
     sudo apt install python3.9 expect -y || { echo -e "${RED}Something went wrong, Try running the script again.${NC}"; exit 1; }
     curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-    python3.9 get-pip.py
-    pip3.9 install requests
+    python3.11 get-pip.py
+    pip3.11 install requests
     curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
     echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
     sudo apt update
@@ -220,7 +220,7 @@ start()
     clear
     tput setaf 41; curl -s 'https://gist.githubusercontent.com/Mobassar4u/c4672f8e826a591fddbd0acf722e5160/raw/Linuxpcimage' || { tput setaf 9; echo " " && echo "This script needs active Internet Connection, Please Check and try again."; exit 1; }
     info;
-    python='python3.9'
+    python='python3.11'
     take_vars;
     
     
